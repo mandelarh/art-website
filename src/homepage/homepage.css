@@ -1,0 +1,8 @@
+/* homepage.css */
+.home-container {
+  display: flex;
+  flex-direction: column; /* Forces them to stack vertically */
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}

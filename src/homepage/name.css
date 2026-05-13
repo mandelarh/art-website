@@ -1,0 +1,84 @@
+/* name.css */
+.hero-container {
+  background-image: url('./pootie.JPEG'); /* The path to your pink JPG */
+  background-size: cover;
+  background-position: center;
+  height: 100vh; /* This is crucial so it fills the screen */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.main-title {
+  font-family: 'Arial Black', sans-serif;
+  font-size: 8rem;
+  color: black;
+  letter-spacing: 15px;
+  text-transform: uppercase;
+}
+
+/* Hamburger Menu Positioning */
+.nav-overlay {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  z-index: 10;
+}
+
+.menu-icon {
+  cursor: pointer;
+}
+
+.bar {
+  width: 40px;
+  height: 5px;
+  background-color: #000;
+  margin: 8px 0;
+}
+
+/* name.css additions */
+
+.full-screen-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #FF70B4; /* Same pink as your background */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 100; /* Makes sure it's above the NAME and bars */
+}
+
+.menu-links {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+.menu-links li {
+  margin: 20px 0;
+}
+
+.menu-links a {
+  font-family: 'Arial Black', sans-serif;
+  font-size: 3rem;
+  color: black;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.close-btn {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  font-family: 'Arial Black', sans-serif;
+}

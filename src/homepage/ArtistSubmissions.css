@@ -1,0 +1,71 @@
+.submission-section {
+  background-color: #f8ebe6; 
+  /* Change min-height from 100vh to auto */
+  min-height: auto; 
+  /* Add padding to the bottom to create a clean 'cut off' */
+  padding: 60px 50px 80px 50px; 
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.title-box {
+  border: 2px solid #8a2be2; /* Purple border from screenshot */
+  width: fit-content;
+  margin: 0 auto 50px;
+  padding: 5px 40px;
+}
+
+.submission-title {
+  font-family: 'Arial Black', sans-serif;
+  font-size: 3rem;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+.submission-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px; /* Reduced gap slightly to tighten the look */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.input-group label {
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  margin-right: 20px;
+}
+
+.pill-input {
+  border: 3px solid black;
+  border-radius: 50px; /* Gives the 'pill' shape */
+  padding: 10px 20px;
+  width: 250px;
+  background: none;
+  font-size: 1.2rem;
+}
+
+.statement-box {
+  border: 3px solid black;
+  border-radius: 30px;
+  width: 100%;
+  height: 300px;
+  background: none;
+  margin-top: 10px;
+}
+
+.submit-btn {
+  margin-top: 20px;
+  padding: 10px 30px;
+  background: black;
+  color: white;
+  border-radius: 50px;
+  cursor: pointer;
+}

@@ -1,0 +1,74 @@
+.exhibit-section {
+  background-color: #000000; /* Deep black background */
+  color: #FF70B4; /* The signature pink from your mockup */
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 10%;
+  box-sizing: border-box;
+}
+
+.exhibit-content {
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+  max-width: 1200px;
+}
+
+.exhibit-info {
+  flex: 1;
+}
+
+.exhibit-header {
+  font-family: 'Arial Black', sans-serif; /* Use a heavy font weight */
+  font-size: 4.5rem;
+  line-height: 0.85;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+}
+
+.artist-name {
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+
+.exhibit-dates, .exhibit-blurb {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+}
+
+/* Visual Side Styles */
+.exhibit-visual {
+  flex: 1;
+  position: relative;
+}
+
+.img-container {
+  position: relative;
+  width: 100%;
+}
+
+.main-exhibit-img {
+  width: 100%;
+  height: auto;
+  filter: grayscale(100%); /* Force the B&W look from your mockup */
+  display: block;
+}
+
+.pink-accent-shape {
+  position: absolute;
+  bottom: -30px; /* Adjust to move shape further down */
+  right: -30px;  /* Adjust to move shape further right */
+  width: 180px;
+  height: 180px;
+  z-index: 5;
+}
+
+.placeholder-shape {
+  width: 100%;
+  height: 100%;
+  background-color: #FF70B4;
+  /* Add a clip-path or mask here if you want a specific jagged shape! */
+}

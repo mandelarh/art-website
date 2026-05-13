@@ -1,0 +1,12 @@
+/* src/index.css */
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth; /* Makes the dropdown links slide instead of jump */
+}
+
+/* Setting the default font for the whole site */
+body {
+  font-family: 'Helvetica', 'Arial', sans-serif;
+}
