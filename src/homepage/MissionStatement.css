@@ -56,3 +56,24 @@
   font-weight: 300;
   opacity: 0.8;
 }
+
+@media (max-width: 768px) {
+  .mission-title {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+  }
+
+  .mission-text {
+    font-size: 1.2rem; /* Smaller text for easier reading on phones */
+    padding: 0 10px;
+  }
+
+  .social-links {
+    flex-direction: column; /* Stack Instagram, Email, YouTube vertically */
+    gap: 20px;
+  }
+
+  .divider {
+    display: none; /* Hide the vertical bars | on mobile */
+  }
+}
