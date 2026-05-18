@@ -1,0 +1,42 @@
+.coming-soon-container {
+  background-color: #000000; /* Keeps the pure black background canvas */
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 80px 10%;
+  
+  /* THE FIX FOR THE WHITE SPACE */
+  min-height: 100vh;         /* Forces the black canvas to fill the entire desktop screen */
+  box-sizing: border-box;
+  position: relative;        /* Crucial for absolute positioning a back-link if desired */
+}
+
+.text-content {
+  color: #ffc0cb;
+  max-width: 50%;
+}
+
+.coming-soon-title {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 800;
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 30px;
+}
+
+.coming-soon-subtitle {
+  font-family: 'Georgia', serif;
+  font-size: 1.2rem;
+  opacity: 0.8;
+}
+
+.image-frame {
+  max-width: 40%;
+}
+
+.image-frame img {
+  width: 100%;
+  height: auto;
+  filter: grayscale(100%);
+  display: block;
+}

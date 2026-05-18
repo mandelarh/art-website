@@ -1,79 +1,85 @@
 .mission-section {
-  background-color: black;
-  color: white;
-  padding: 100px 50px;
-  text-align: center;
+  background-color: #000000;
+  min-height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 100px 40px;
+  position: relative;
+  
+  /* Flexbox alignment to guarantee perfect vertical and horizontal centering */
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  min-height: 60vh; /* Adjusts to be shorter than a full page */
 }
 
 .mission-title {
   font-family: 'Arial Black', sans-serif;
   font-size: 3.5rem;
-  margin-bottom: 50px;
-  letter-spacing: 4px;
+  color: #ffffff; /* Explicitly forces heading to be white text */
+  margin: 0 0 40px 0;
+  text-align: center;
+  letter-spacing: 2px;
 }
 
 .mission-text {
   max-width: 800px;
-  font-size: 1.8rem;
-  line-height: 1.4;
-  margin-bottom: 80px;
-  font-family: 'Arial', sans-serif;
+  text-align: center;
+  margin-bottom: 50px;
 }
 
 .mission-text p {
-  margin-bottom: 20px;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.6;
+  color: #ffffff; /* Explicitly forces body paragraphs to be white text */
+  margin-bottom: 25px;
 }
 
 .social-links {
   display: flex;
   align-items: center;
-  gap: 15px;
-  font-size: 1.2rem;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap; /* Ensures icons stack nicely on mobile devices */
 }
 
 .social-item {
   display: flex;
   align-items: center;
-  gap: 8px;
-  color: white;
+  gap: 10px;
+  color: #ffffff; /* Explicitly forces links to be white */
   text-decoration: none;
-  transition: opacity 0.2s;
+  font-size: 1.1rem;
+  transition: opacity 0.2s ease;
 }
 
 .social-item:hover {
-  opacity: 0.7;
+  opacity: 0.7; /* Soft fade effect when user hovers over links */
 }
 
 .icon {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 
 .divider {
-  font-weight: 300;
-  opacity: 0.8;
+  color: #ffffff;
+  opacity: 0.5;
 }
 
+/* Mobile Responsive adjustment to ensure text doesn't look cut off on phones */
 @media (max-width: 768px) {
   .mission-title {
-    font-size: 2.5rem;
-    letter-spacing: 2px;
+    font-size: 2.2rem;
   }
-
-  .mission-text {
-    font-size: 1.2rem; /* Smaller text for easier reading on phones */
-    padding: 0 10px;
+  .mission-text p {
+    font-size: 1.1rem;
   }
-
   .social-links {
-    flex-direction: column; /* Stack Instagram, Email, YouTube vertically */
-    gap: 20px;
+    flex-direction: column;
+    gap: 15px;
   }
-
   .divider {
-    display: none; /* Hide the vertical bars | on mobile */
+    display: none; /* Hide vertical dividers when links stack on mobile */
   }
 }

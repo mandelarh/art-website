@@ -3,16 +3,19 @@ import C_exhibition from './C_exhibition.jsx';
 import P_exhibition from './P_exhibition.jsx';
 import ArtistSubmissions from './ArtistSubmissions.jsx';
 import MissionStatement from './MissionStatement.jsx';
+import ComingSoon from './ComingSoon.jsx';
 const Home = () => {
   return (
-    <main>
+    <div>
       <Name />  {/* Changed from <Hero /> to <Name /> */}
-      <C_exhibition />
-      <P_exhibition />
-      <ArtistSubmissions />
+      {/* <C_exhibition /> */}
+      {/* <P_exhibition /> */}
+      <ComingSoon />
       <MissionStatement />
+      <ArtistSubmissions />
+      
 
-    </main>
+    </div>
   );
 };
 export default Home;

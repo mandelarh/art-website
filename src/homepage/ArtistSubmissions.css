@@ -1,18 +1,17 @@
 .submission-section {
   background-color: #f8ebe6; 
-  /* Change min-height from 100vh to auto */
-  min-height: auto; 
-  /* Add padding to the bottom to create a clean 'cut off' */
+  /* FIXED: Changed from auto to 100vh so desktop screens fill completely too */
+  min-height: 100vh; 
   padding: 60px 50px 80px 50px; 
   width: 100%;
   box-sizing: border-box;
 }
 
 .title-box {
-  border: 2px solid #8a2be2; /* Purple border from screenshot */
   width: fit-content;
   margin: 0 auto 50px;
   padding: 5px 40px;
+  /* Double checking: Make sure there is NO border line here */
 }
 
 .submission-title {
@@ -25,7 +24,7 @@
 .submission-form {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 60px; /* Reduced gap slightly to tighten the look */
+  gap: 60px; 
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -45,7 +44,7 @@
 
 .pill-input {
   border: 3px solid black;
-  border-radius: 50px; /* Gives the 'pill' shape */
+  border-radius: 50px; 
   padding: 10px 20px;
   width: 250px;
   background: none;
@@ -73,11 +72,15 @@
 /* Mobile Responsive Adjustments */
 @media (max-width: 768px) {
   .submission-section {
-    padding: 40px 20px; 
-    width: 100%;           /* Added constraint */
-    max-width: 100vw;      /* Added constraint */
-    overflow: hidden;      /* Prevents internal element pushing */
+    width: 100%;
+    max-width: 100vw;
+    margin: 0;
     box-sizing: border-box;
+    min-height: 100vh;       
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+    padding: 40px 20px 60px 20px; /* Swapped to tighter mobile padding */
   }
 
   .submission-title {
@@ -88,7 +91,7 @@
     display: flex;
     flex-direction: column; 
     gap: 30px;
-    width: 100%;           /* Added constraint */
+    width: 100%;           
   }
 
   .pill-input, .statement-box {

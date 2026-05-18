@@ -1,5 +1,6 @@
 import React from 'react';
 import './P_exhibition.css';
+import { Link } from 'react-router-dom';
 
 // 1. This one line finds EVERY .jpg in your current folder
 const images = import.meta.glob('./*.jpg', { eager: true });
@@ -17,6 +18,9 @@ const P_exhibition = () => {
 
   return (
     <section className="previous-section">
+      <Link to="/" style={{ color: '#000', textDecoration: 'underline', padding: '20px', display: 'block' }}>
+      ← Back to Gallery Home
+      </Link>
       <h2 className="previous-title">PREVIOUS EXHIBITIONS</h2>
       <div className="exhib-grid">
         {exhibitions.map((exhib) => (

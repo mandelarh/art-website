@@ -1,10 +1,22 @@
 import React from 'react';
 import { FaInstagram, FaYoutube, FaEnvelope } from 'react-icons/fa';
 import './MissionStatement.css';
+import { Link } from 'react-router-dom';
 
-const MissionStatement = () => {
+const MissionStatement = ({ isStandalone }) => {
   return (
-    <section className="mission-section">
+    <section id="mission-section" className="mission-section">
+      {isStandalone && (
+        <Link to="/" style={{ 
+          position: 'absolute', 
+          top: '20px', 
+          left: '20px', 
+          color: '#ffffff', 
+          textDecoration: 'underline'
+        }}>
+          ← Back to Gallery Home
+        </Link>
+      )}
       <h1 className="mission-title">OUR MISSION</h1>
       
       <div className="mission-text">

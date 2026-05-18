@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import { createClient } from '@supabase/supabase-js';
 import './ArtistSubmissions.css';
+import { Link } from 'react-router-dom';
 
 // Initialize Supabase Client
 const supabaseUrl = 'https://hcstwciorhwdczrovypz.supabase.co';
 const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imhjc3R3Y2lvcmh3ZGN6cm92eXB6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzg2OTM0NjYsImV4cCI6MjA5NDI2OTQ2Nn0.G4OYeZPvjaJYDiOToS4zWpuOW6jQh_5KMrDMP3FoYYo';
 const supabase = createClient(supabaseUrl, supabaseKey);
 
-const ArtistSubmissions = () => {
+const ArtistSubmissions = ({ isStandalone }) => {
   // 1. State for text inputs
   const [formData, setFormData] = useState({
     full_name: '',
@@ -79,7 +80,20 @@ const ArtistSubmissions = () => {
   };
 
   return (
-    <section className="submission-section">
+    <section id="submission-section" className="submission-section">
+      {isStandalone && (
+        <Link to="/" style={{ 
+          color: '#000', 
+          textDecoration: 'underline', 
+          padding: '20px', 
+          display: 'block',
+          position: 'absolute',
+          top: '20px',
+          left: '20px'
+        }}>
+          ← Back to Gallery Home
+        </Link>
+      )}
       <div className="title-box">
         <h1 className="submission-title">ARTIST SUBMISSIONS</h1>
       </div>

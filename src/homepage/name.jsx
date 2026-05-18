@@ -1,19 +1,20 @@
-import React, { useState } from 'react'; // Import the 'switch' (useState)
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom'; // Crucial import for page jumping
 import './name.css'; 
 
 const Name = () => {
-  // 1. Create the 'switch'. By default, it's closed (false).
+  // Keeps track of whether the fullscreen mobile menu is open
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  // 2. Create a function to flip the switch
+  // FIXED: Toggles the state using the correct setter function name
   const toggleMenu = () => {
-    setIsOpen(!isMenuOpen);
+    setIsMenuOpen(!isMenuOpen);
   };
 
   return (
     <section className="hero-container">
       
-      {/* 3. Add an onClick to the icon so it triggers the switch */}
+      {/* Tapping this nav icon triggers the state to open the menu */}
       <nav className="nav-overlay" onClick={toggleMenu}>
         <div className="menu-icon">
           <div className="bar"></div>
@@ -21,20 +22,27 @@ const Name = () => {
         </div>
       </nav>
 
-      {/* 4. The Conditional Menu: Only shows if isMenuOpen is true */}
+      {/* The Fullscreen Navigation Menu Overlay */}
       {isMenuOpen && (
         <div className="full-screen-menu">
           <button className="close-btn" onClick={toggleMenu}>X</button>
+          
           <ul className="menu-links">
-            <li><a href="/">Home</a></li>
-            <li><a href="/exhibition">Exhibition</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/gallery">Gallery</a></li>
+            {/* These links switch URLs to your separate pages and close the menu overlay simultaneously */}
+            <li><Link to="/mission" onClick={toggleMenu}>Our Mission</Link></li>
+            <li><Link to="/exhibition" onClick={toggleMenu}>Current Exhibition</Link></li>
+            
+            {/* FUTURE SECTIONS (Kept hidden inside code comments for later use)
+            <li><Link to="/previous-exhibitions" onClick={toggleMenu}>Previous Exhibitions</Link></li>
+            <li><Link to="/digital-gallery" onClick={toggleMenu}>Digital Gallery</Link></li>
+            */}
+            
+            <li><Link to="/apply" onClick={toggleMenu}>Apply Now</Link></li>
           </ul>
         </div>
       )}
 
-      <h1 className="main-title">"NAME"</h1>
+      <h1 className="main-title">"FIREWALL"</h1>
     </section>
   );
 };
