@@ -40,3 +40,53 @@
   filter: grayscale(100%);
   display: block;
 }
+
+/* --- MOBILE RESPONSIVE FIX FOR COMING SOON --- */
+@media (max-width: 768px) {
+  .coming-soon-container {
+    /* Switches the layout from a side-by-side row to a vertical stack */
+    flex-direction: column; 
+    justify-content: flex-start;
+    align-items: center;
+    
+    /* Adds safety padding at the top and bottom so content doesn't hit screen edges */
+    padding: 100px 24px 60px 24px;
+    height: auto;
+    min-height: 100dvh;
+    box-sizing: border-box;
+  }
+
+  .text-content {
+    /* Forces the text container to take up full width and center its alignment */
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    margin-bottom: 40px; /* Generates breathing room between text and image */
+  }
+
+  .coming-soon-title {
+    /* Scales down the giant font size so words can break and fit naturally */
+    font-size: 2.2rem;
+    line-height: 1.3;
+    letter-spacing: 1px;
+  }
+
+  .coming-soon-subtitle {
+    font-size: 1.2rem;
+    margin-top: 10px;
+  }
+
+  .image-frame {
+    /* Ensures the image frame scales cleanly to match the container width */
+    width: 100%;
+    max-width: 320px; /* Keeps the portrait aspect ratio crisp and not overly stretched */
+    display: flex;
+    justify-content: center;
+  }
+
+  .image-frame img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
