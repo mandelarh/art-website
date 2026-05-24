@@ -22,7 +22,7 @@ const ComingSoon = ({ isStandalone }) => {
 
       <div className="text-content">
         <h1 className="coming-soon-title">
-          INCOMING EXHIBITION :<br/>INSERT NAME
+          INCOMING EXHIBITION<br/>
         </h1>
         <p className="coming-soon-subtitle">
           Coming soon...

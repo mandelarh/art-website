@@ -1,0 +1,55 @@
+.placeholder-container {
+  background-color: #000000;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 40px;
+  position: relative;
+}
+
+.placeholder-back-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: #ffc0cb; /* Matching your signature gallery pink */
+  text-decoration: underline;
+  font-family: sans-serif;
+  font-size: 1rem;
+}
+
+.placeholder-text-content {
+  text-align: center;
+  max-width: 80%;
+}
+
+.placeholder-main-title {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 800;
+  font-size: 3.5rem;
+  line-height: 1.2;
+  color: #ffc0cb; /* Using the exhibition hot pink theme */
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+
+.placeholder-subtitle {
+  font-family: 'Georgia', serif;
+  font-size: 1.5rem;
+  color: #ffffff;
+  opacity: 0.8;
+  font-style: italic;
+}
+
+/* Mobile Tweak */
+@media (max-width: 768px) {
+  .placeholder-main-title {
+    font-size: 2.2rem;
+  }
+  .placeholder-subtitle {
+    font-size: 1.2rem;
+  }
+}

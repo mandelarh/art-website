@@ -32,26 +32,26 @@ const MissionStatement = ({ isStandalone }) => {
 
       <div className="social-links">
         {/* Email */}
-        <a href="mailto:thebamgallery@gmail.com" className="social-item">
+        {/*<a href="mailto:thebamgallery@gmail.com" className="social-item">
           <FaEnvelope className="icon" />
           <span>thebamgallery@gmail.com</span>
-        </a>
+        </a>*/}
 
         <span className="divider">|</span>
 
         {/* Instagram */}
-        <a href="https://instagram.com/blahblahblah" target="_blank" rel="noreferrer" className="social-item">
+        {/*<a href="https://instagram.com/blahblahblah" target="_blank" rel="noreferrer" className="social-item">
           <FaInstagram className="icon" />
           <span>@blahblahblah</span>
-        </a>
+        </a>*/}
 
         <span className="divider">|</span>
 
         {/* YouTube */}
-        <a href="https://youtube.com/@yourchannel" target="_blank" rel="noreferrer" className="social-item">
+        {/*<a href="https://youtube.com/@yourchannel" target="_blank" rel="noreferrer" className="social-item">
           <FaYoutube className="icon" />
           <span>YouTube</span>
-        </a>
+        </a>*/}
       </div>
     </section>
   );

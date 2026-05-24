@@ -7,7 +7,7 @@ import Homepage from './homepage/homepage.jsx'
 import MissionStatement from './homepage/MissionStatement.jsx' // Double-check file path matches your project
 import ComingSoon from './homepage/ComingSoon.jsx'             // Double-check file path matches your project
 import ArtistSubmissions from './homepage/ArtistSubmissions.jsx' // Double-check file path matches your project
-
+import GalleryPlaceholder from './homepage/GalleryPlaceholder.jsx' // Double-check file path matches your project
 import './index.css' // Your global styles
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -21,6 +21,14 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path="/mission" element={<MissionStatement isStandalone={true} />} />
         <Route path="/exhibition" element={<ComingSoon isStandalone={true} />} />
         <Route path="/apply" element={<ArtistSubmissions isStandalone={true} />} />
+        <Route 
+          path="/previous-exhibitions" 
+          element={<GalleryPlaceholder pageTitle="Previous Exhibitions" isStandalone={true} />} 
+        />
+        <Route 
+          path="/digital-gallery" 
+          element={<GalleryPlaceholder pageTitle="Digital Gallery" isStandalone={true} />} 
+        />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

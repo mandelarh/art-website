@@ -32,10 +32,9 @@ const Name = () => {
             <li><Link to="/mission" onClick={toggleMenu}>Our Mission</Link></li>
             <li><Link to="/exhibition" onClick={toggleMenu}>Current Exhibition</Link></li>
             
-            {/* FUTURE SECTIONS (Kept hidden inside code comments for later use)
             <li><Link to="/previous-exhibitions" onClick={toggleMenu}>Previous Exhibitions</Link></li>
             <li><Link to="/digital-gallery" onClick={toggleMenu}>Digital Gallery</Link></li>
-            */}
+            
             
             <li><Link to="/apply" onClick={toggleMenu}>Apply Now</Link></li>
           </ul>
