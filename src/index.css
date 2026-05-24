@@ -1,24 +1,26 @@
 /* src/index.css */
-body, html {
+html, body, #root {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  /* Add these three lines to fix the white space/horizontal scroll */
   max-width: 100%;
   overflow-x: hidden; 
   position: relative;
+  
+  /* THE FIX FOR THE MOBILE WHITE BLEED */
+  background-color: #000000; /* Makes the default browser "bounce" area black */
+  min-height: 100vh;         /* Fallback for older browsers */
+  min-height: 100dvh;        /* Locks the base canvas to the dynamic mobile screen */
 }
 
 /* Setting the default font for the whole site */
 body {
   font-family: 'Helvetica', 'Arial', sans-serif;
-  /* Double protection for the body */
   width: 100%;
-  overflow-x: hidden;
 }
 
-/* Optional: Ensures all elements respect the box-sizing */
+/* Ensures all elements respect the box-sizing */
 *, *:before, *:after {
   box-sizing: inherit;
 }

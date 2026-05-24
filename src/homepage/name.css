@@ -1,9 +1,12 @@
 /* name.css */
 .hero-container {
-  background-image: url('./pootie.JPEG'); /* The path to your pink JPG */
+  background-image: url('./pootie.JPEG'); 
   background-size: cover;
   background-position: center;
-  height: 100vh; /* This is crucial so it fills the screen */
+  
+  /* CHANGE THIS: 'vh' to 'dvh' to fix the mobile scrollbars/white space */
+  height: 100dvh; 
+  
   width: 100%;
   display: flex;
   justify-content: center;
@@ -81,4 +84,38 @@
   font-size: 2rem;
   cursor: pointer;
   font-family: 'Arial Black', sans-serif;
+}
+
+/* --- MOBILE RESPONSIVE FIXES --- */
+@media (max-width: 768px) {
+  
+  .hero-container {
+    /* Pushes the centrally aligned title downward, out of the hamburger's way */
+    padding-top: 80px; 
+    box-sizing: border-box;
+  }
+
+  .main-title {
+    /* 8rem is too wide for phones. This scales it down beautifully! */
+    font-size: 3.5rem; 
+    letter-spacing: 10px;
+  }
+
+  .nav-overlay {
+    /* Tucks the hamburger a bit tighter to the corner on small screens */
+    top: 25px;
+    left: 20px;
+  }
+
+  .bar {
+    /* Shrinks the actual hamburger lines slightly so they aren't bulky on mobile */
+    width: 32px;
+    height: 4px;
+    margin: 6px 0;
+  }
+
+  .menu-links a {
+    /* Shrinks the massive drop-down text slightly so it fits better on narrow phones */
+    font-size: 2rem;
+  }
 }
